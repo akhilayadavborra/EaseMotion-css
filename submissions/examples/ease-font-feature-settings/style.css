@@ -1,16 +1,33 @@
-/* EaseMotion CSS - font-feature-settings utility classes */
+/* EaseMotion CSS - font-feature-settings utilities
+   Author: akhilayadavborra
+   Description: Utility classes for OpenType font features
+*/
 
+/* Basic */
 .ease-ffs-normal { font-feature-settings: normal; }
-.ease-ffs-liga { font-feature-settings: 'liga' 1; }
-.ease-ffs-no-liga { font-feature-settings: 'liga' 0; }
-.ease-ffs-kern { font-feature-settings: 'kern' 1; }
-.ease-ffs-no-kern { font-feature-settings: 'kern' 0; }
-.ease-ffs-smcp { font-feature-settings: 'smcp' 1; }
+
+/* Ligatures */
+.ease-ffs-liga-on  { font-feature-settings: 'liga' 1; }
+.ease-ffs-liga-off { font-feature-settings: 'liga' 0; }
+.ease-ffs-dlig     { font-feature-settings: 'dlig' 1; }
+
+/* Number styles */
 .ease-ffs-tnum { font-feature-settings: 'tnum' 1; }
+.ease-ffs-pnum { font-feature-settings: 'pnum' 1; }
 .ease-ffs-lnum { font-feature-settings: 'lnum' 1; }
 .ease-ffs-onum { font-feature-settings: 'onum' 1; }
-.ease-ffs-calt { font-feature-settings: 'calt' 1; }
-.ease-ffs-no-calt { font-feature-settings: 'calt' 0; }
-.ease-ffs-frac { font-feature-settings: 'frac' 1; }
-.ease-ffs-sups { font-feature-settings: 'sups' 1; }
-.ease-ffs-subs { font-feature-settings: 'subs' 1; }
+
+/* Caps */
+.ease-ffs-smcp    { font-feature-settings: 'smcp' 1; }
+.ease-ffs-c2sc    { font-feature-settings: 'c2sc' 1; }
+.ease-ffs-allsmcp { font-feature-settings: 'smcp' 1, 'c2sc' 1; }
+
+/* Special */
+.ease-ffs-kern     { font-feature-settings: 'kern' 1; }
+.ease-ffs-frac     { font-feature-settings: 'frac' 1; }
+.ease-ffs-sups     { font-feature-settings: 'sups' 1; }
+.ease-ffs-subs     { font-feature-settings: 'subs' 1; }
+.ease-ffs-calt-on  { font-feature-settings: 'calt' 1; }
+.ease-ffs-calt-off { font-feature-settings: 'calt' 0; }
+.ease-ffs-swsh     { font-feature-settings: 'swsh' 1; }
+.ease-ffs-hist     { font-feature-settings: 'hist' 1; }

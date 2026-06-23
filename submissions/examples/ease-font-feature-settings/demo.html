@@ -6,56 +6,118 @@
   <title>ease-font-feature-settings Demo</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body { font-family: Georgia, serif; padding: 2rem; background: #f9f9f9; }
-    h1 { color: #333; }
-    .card { background: white; border: 1px solid #ddd; border-radius: 8px;
-            padding: 1rem; margin: 1rem 0; }
-    .label { font-size: 0.75rem; color: #888; margin-bottom: 0.5rem; }
-    .sample { font-size: 1.5rem; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #1a1a2e;
+      color: #eee;
+      padding: 2rem;
+    }
+    h1 {
+      color: #e94560;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: #a0a0b0;
+      margin-bottom: 2rem;
+    }
+    .section-title {
+      color: #6366f1;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 2rem 0 1rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: #16213e;
+      border: 1px solid #0f3460;
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+    .card code {
+      display: block;
+      font-size: 0.75rem;
+      color: #6366f1;
+      margin-bottom: 0.5rem;
+      font-family: monospace;
+    }
+    .card .preview {
+      font-size: 1.4rem;
+      color: #f0f0f0;
+    }
   </style>
 </head>
 <body>
-  <h1>ease-font-feature-settings Utility Classes</h1>
-  <p>CSS utility classes for the font-feature-settings property.</p>
 
-  <div class="card">
-    <div class="label">.ease-ffs-normal</div>
-    <div class="sample ease-ffs-normal">Hello World 0123 fi fl</div>
+  <h1>ease-font-feature-settings</h1>
+  <p class="subtitle">OpenType font feature utility classes for EaseMotion CSS</p>
+
+  <div class="section-title">Ligatures</div>
+  <div class="grid">
+    <div class="card">
+      <code>.ease-ffs-liga-on</code>
+      <div class="preview ease-ffs-liga-on">fi fl ff ffi ffl</div>
+    </div>
+    <div class="card">
+      <code>.ease-ffs-liga-off</code>
+      <div class="preview ease-ffs-liga-off">fi fl ff ffi ffl</div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="label">.ease-ffs-liga (ligatures on)</div>
-    <div class="sample ease-ffs-liga">fi fl ff ffi ffl</div>
+  <div class="section-title">Number Styles</div>
+  <div class="grid">
+    <div class="card">
+      <code>.ease-ffs-tnum (tabular)</code>
+      <div class="preview ease-ffs-tnum">1234567890</div>
+    </div>
+    <div class="card">
+      <code>.ease-ffs-onum (oldstyle)</code>
+      <div class="preview ease-ffs-onum">1234567890</div>
+    </div>
+    <div class="card">
+      <code>.ease-ffs-lnum (lining)</code>
+      <div class="preview ease-ffs-lnum">1234567890</div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="label">.ease-ffs-no-liga (ligatures off)</div>
-    <div class="sample ease-ffs-no-liga">fi fl ff ffi ffl</div>
+  <div class="section-title">Caps</div>
+  <div class="grid">
+    <div class="card">
+      <code>.ease-ffs-smcp (small caps)</code>
+      <div class="preview ease-ffs-smcp">Hello World</div>
+    </div>
+    <div class="card">
+      <code>.ease-ffs-allsmcp (all small caps)</code>
+      <div class="preview ease-ffs-allsmcp">Hello World</div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="label">.ease-ffs-smcp (small caps)</div>
-    <div class="sample ease-ffs-smcp">Hello World Small Caps</div>
-  </div>
-
-  <div class="card">
-    <div class="label">.ease-ffs-tnum (tabular numbers)</div>
-    <div class="sample ease-ffs-tnum">1234567890</div>
-  </div>
-
-  <div class="card">
-    <div class="label">.ease-ffs-onum (oldstyle numbers)</div>
-    <div class="sample ease-ffs-onum">1234567890</div>
-  </div>
-
-  <div class="card">
-    <div class="label">.ease-ffs-frac (fractions)</div>
-    <div class="sample ease-ffs-frac">1/2 3/4 5/6</div>
-  </div>
-
-  <div class="card">
-    <div class="label">.ease-ffs-sups (superscript)</div>
-    <div class="sample ease-ffs-sups">Hello 123</div>
+  <div class="section-title">Special Features</div>
+  <div class="grid">
+    <div class="card">
+      <code>.ease-ffs-frac (fractions)</code>
+      <div class="preview ease-ffs-frac">1/2 3/4 5/8</div>
+    </div>
+    <div class="card">
+      <code>.ease-ffs-sups (superscript)</code>
+      <div class="preview ease-ffs-sups">E = mc2</div>
+    </div>
+    <div class="card">
+      <code>.ease-ffs-subs (subscript)</code>
+      <div class="preview ease-ffs-subs">H2O</div>
+    </div>
+    <div class="card">
+      <code>.ease-ffs-kern (kerning)</code>
+      <div class="preview ease-ffs-kern">WAVE Typography</div>
+    </div>
   </div>
 
 </body>
